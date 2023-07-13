@@ -1,0 +1,11 @@
+#Settings {display: none; }
+
+#Menu {display: grid; grid-template-columns: auto auto auto;}
+#Menu-settings {justify-content: flex-start; padding-left: 20px;}
+#Roster-week-input {background: white; }
+#Roster-container-week {max-height: unset; max-height: calc(100vh - 40px); overflow: scroll;}
+#Week-select-overview {display: inline-block;}
+#Week-select-overview >select { min-height: 28px; padding: 5px 10px 4px; height: 28px;}
+#Week-select-overview:before { top: 0;}
+table thead tr:first-child { position: sticky; top: 0; background: white;}
+

@@ -1,0 +1,42 @@
+button {border-radius: 0 !important; text-align: center; justify-content: center;}
+
+
+body { margin: 45px;}
+body >.container{ display: grid; gap: 50px; grid-template-columns: auto auto;}
+
+label > select {width: 100%;}
+.hint {all: unset !important; color: var(--color-red) !important;}
+
+#Logout-button { background-color: var(--color-lightblue-background); border-radius: 0; position: fixed; right: 0; top: 0; z-index: 10000000;}
+
+#Institutions { border-top: 1px solid black; display: grid; grid-template-columns: auto auto; max-width: max-content; margin-bottom: 20px}
+#Institutions >*:not(button) { border-bottom: 1px solid black; display: flex; align-items: center; }
+#Institutions >*.container-remove { padding-left: 8px; }
+#Institutions >.name { padding: 8px; }
+#Institution-add-button {grid-column: 1 / -1; display: flex; justify-content: center; align-items: center; }
+
+.Popup-request-remove-institution .hint { color: red; font-size: 12px;}
+
+.container-users .role-hints {border-top: 1px solid black; display: grid; font-size: 12px; gap: 0 6px; grid-template-columns: auto auto; max-width: max-content; margin-bottom: 16px; padding-top: 8px; }
+#Users { display: grid; grid-template-columns: auto auto auto auto auto auto; max-width: max-content; }
+#Users >*:not(#Users-add-button) { border-bottom: 1px solid black; padding: 8px; display: flex; align-items: center; }
+#Users >.title { border-bottom: 2px solid black !important; border-top: 1px solid black; margin-bottom: 1px; }
+#Users-add-button {grid-column: 1 / -1; display: flex; justify-content: center; align-items: center; }
+
+.Popup-container { padding: 20px; box-sizing: border-box;}
+.Popup-container h2 { margin-top: 0; }
+.Popup-container h2.name { color: var(--color-text-orange);}
+.container-title { display: flex;}
+.Popup-container >.container { display: flex; flex-direction: column; gap: 16px; }
+.Popup-container >.container >* { display: flex; align-items: center; gap: 8px;}
+
+.Popup-add-new-user .container {display: grid; grid-template-columns: auto auto; max-width: max-content;}
+.Popup-add-new-user .hint { color: red; font-size: 12px;}
+
+
+.Popup-edit-user .hint {all: unset; color: var(--color-red);}
+.Popup-edit-user .container > div { max-width: max-content; }
+.Popup-edit-user .container .container-name {display: flex; flex-direction: column; align-items: flex-start; }
+.Popup-edit-user .container .container-buttons {display: flex; gap: 8px;}
+.Popup-edit-user .container .container-password {display: grid; grid-template-columns: auto auto;}
+.Popup-edit-user .container .container-password h3 {grid-column: 1 / -1;}

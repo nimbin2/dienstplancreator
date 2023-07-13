@@ -1,0 +1,130 @@
+dbCreat_settings_departments        = () => { DATA.d = []}
+dbAdd_settings = (database_version, default_overtime, default_edit_cell_right, default_row_top, default_row_bottom, sort_days, sort_week, printmode, zoom_web, zoom_print_h, zoom_print_v) => {
+    settings = { database_version: database_version.toString(), default_overtime: default_overtime ? 1 : 0, default_edit_cell_right: default_edit_cell_right ? 1 : 0, default_row_top: default_row_top ? 1 : 0, default_row_bottom: default_row_bottom ? 1 : 0, sort_days: sort_days.toString(), sort_week: sort_week.toString(), printmode: printmode, zoom_web: parseFloat(zoom_web), zoom_print_h: zoom_print_h, zoom_print_v: zoom_print_v }
+    console.log("###", settings)
+    $.ajax({
+        url: "/api/settings/add.php",
+        type: "POST",
+        dataType: 'json',
+        contentType: 'application/json',
+        data: JSON.stringify(settings),
+        cache: false,
+        success: (data) => { $('body').load('index.php') },
+        error: (data) => {console.log("fail", data)}
+    })
+}
+dbSet_settings_where = (name, value) => {
+	let data = {name: name, value: value}
+    $.ajax({
+        url: "/api/settings/update.php",
+        type: "POST",
+        dataType: 'json',
+        contentType: 'application/json',
+        data: JSON.stringify(data),
+        cache: false,
+        error: (data) => {console.log("fail", data)}
+    }); 
+}
+dbGet_settings_where = async (name) => {
+    let data = {name: name}
+	let d
+    return await $.ajax({
+        url: "/api/settings/get.php",
+        type: "POST",
+        dataType: 'json',
+        contentType: 'application/json',
+        data: JSON.stringify(data),
+        cache: false,
+        success: (res) => { return res },
+        error: (res) => {console.log("fail", res)}
+    }); 
+}
+dbGet_settings_departments          = () => {return DATA.d}
+dbGet_settings_department_where_id  = (id) => {return DATA.d.find(d => d.id === id).v}
+dbAdd_settings_department           = (name) => {DATA.d.push({id: dbGet_settings_departments().length > 0 ? 1+Math.max.apply(Math, dbGet_settings_departments().map(l => l.id)) : 0, v: name})}
+dbSet_settings_department           = (id, value) => {DATA.d.find(d => d.id === id).v = value}
+dbRemove_settings_department        = (id) => {DATA.d = DATA.d.filter(d => d.id !== id)}
+
+dbSet_settings_edit_cell_default    = (value) => { dbSet_settings_where("default_edit_cell_right", value ? 0 : 1) }
+dbGet_settings_edit_cell_default    = () => { return dbSet_settings_where("default_edit_cell_right") === 0 ? false : true }
+
+dbSet_settings_edit_row_top_default    = (value) => { dbSet_settings_where("default_row_top", value ? 0 : 1) }
+dbGet_settings_edit_row_top_default    = async () => { return await dbGet_settings_where("default_row_top") === 0 ? false : true }
+
+dbSet_settings_edit_row_bottom_default    = (value) => { dbSet_settings_where("default_row_bottom", value ? 0 : 1) }
+dbGet_settings_edit_row_bottom_default    = async () => { return await dbGet_settings_where("default_row_bottom") === 0 ? false : true }
+
+// [{t: string, a: string},..]
+dbAdd_settings_label = (name, cut) => { 
+    let label = {name: name, cut: cut}
+    $.ajax({
+        url: "/api/settings_labels/add.php",
+        type: "POST",
+        dataType: 'json',
+        contentType: 'application/json',
+        data: JSON.stringify(label),
+        cache: false,
+        success: (data) => { $('body').load('index.php') },
+        error: (data) => {console.log("fail", data)}
+    })
+}
+dbGet_settings_labels = () => { 
+    return await $.ajax({
+        url: "/api/settings_labels/get.php",
+        type: "POST",
+        dataType: 'json',
+        contentType: 'application/json',
+        cache: false,
+        success: (res) => { return res },
+        error: (res) => {console.log("fail", res)}
+    }); 
+}
+dbGet_settings_label        = (id) => { return SETTINGS_LABELS.find(l => l.id === id)}
+dbGet_settings_label_text   = (id) => { return dbGet_settings_label(id).t }
+dbGet_settings_label_cut    = (id) => { return dbGet_settings_label(id).a }
+dbSet_settings_label_text   = (id, text) => { dbGet_settings_label(id).t = text }
+dbSet_settings_label_cut    = (id, cut) => { dbGet_settings_label(id).a = cut }
+
+//[{}]
+dbCreate_shift_label   = () => {DATA.l = []}
+dbGet_shift_labels     = () => { return DATA.l }
+// {i: int, n: string, c: string}
+dbGet_shift_label      = (id) => { return dbGet_shift_labels().find(l => l.id === id)}
+dbGet_shift_label_text = (id) => { return dbGet_shift_label(id)?.n }
+dbset_shift_label_text = (id, value) => { dbGet_shift_label(id).n = value }
+dbGet_shift_label_cut  = (id) => { return dbGet_shift_label(id)?.c }
+dbSet_shift_label_cut  = (id, value) => { dbGet_shift_label(id).c = value }
+dbAdd_shift_label      = (name, cut) => { DATA.l.push({id: dbGet_shift_labels().length > 0 ? 1+Math.max.apply(Math, dbGet_shift_labels().map(l => l.id)) : 0, n: name, c: cut}) }
+dbRemove_shift_label   = (id) => { DATA.l.splice(id, 1) }
+
+// boolean
+dbSet_settings_overtime_default    = (value) => { dbSet_settings_where("default_overtime", value ? 0 : 1) }
+dbGet_settings_overtime_default    = async () => { return await dbGet_settings_where("default_overtime") === 0 ? false : true }
+
+// 0 || 1
+dbSet_settings_printmode    = (value) => { dbSet_settings_where("printmode", value) }
+dbGet_settings_printmode    = async () => { return await dbGet_settings_where("printmode") }
+
+// ["string", "string"]
+dbSet_settings_sort_days    = (value) => { dbSet_settings_where("sort_days", value.toString())}
+dbGet_settings_sort_days    = async () => { return (await dbGet_settings_where("sort_days")).split(',') }
+
+// decimal
+dbSet_settings_version    = (value) => { dbSet_settings_where("database_version", value) }
+dbGet_settings_version    = () => { dbGet_settings_where("database_version")}
+
+// ["string", "string"]
+dbSet_settings_sort_week    = (value) => {dbSet_settings_where("sort_week", value)}
+dbGet_settings_sort_week    = async () => { return (await dbGet_settings_where("sort_week")).split(',') }
+
+// decimal
+dbSet_settings_zoom_web    = (value) => { dbSet_settings_where("zoom_web", value) }
+dbGet_settings_zoom_web    = async () => { return await dbGet_settings_where("zoom_web") }
+
+// decimal
+dbSet_settings_zoom_print_h    = (value) => { dbSet_settings_where("zoom_print_h", value) }
+dbGet_settings_zoom_print_h    = () => { return dbSet_settings_where("zoom_print_h") }
+
+// decimal
+dbSet_settings_zoom_print_v    = (value) => { dbSet_settings_where("zoom_print_v", value) }
+dbGet_settings_zoom_print_v    = () => { return dbSet_settings_where("zoom_print_v") }

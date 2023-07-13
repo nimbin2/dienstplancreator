@@ -1,0 +1,1043 @@
+#Superadmin-back-button { background-color: var(--color-lightblue-background); border-radius: 0; left: 0; top: 0; position: fixed; z-index: 100000000;}
+
+#Start #Version-control {
+    color: var(--color-blue);
+    position: fixed;
+    top: 18px;
+    left: 20px;
+    border: 0;
+    font-weight: bold;
+    font-size: 12px;
+    border: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 2px 6px;
+    height: auto;
+}
+#Start {
+    align-items: center;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
+}
+#Start > div {
+    border-top: 1px solid var(--color-black);
+    height: 58px;
+    max-width: 100vw;
+    width: 350px;
+}
+#Start .start-button-container {border-left: 1px solid var(--color-black); border-right: 1px solid var(--color-black);}
+#Start .start-example-container {border-bottom: 1px solid var(--color-black); margin-bottom: 100px;}
+#Start .start-login {opacity: 0;}
+#Start .file-input:hover + .button-start { opacity: .7;}
+#Start .button-start {
+    all: unset;
+    align-items: center;
+    background-color: orange;
+    cursor: pointer;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+#Start .button-start:hover {
+    opacity: .7;
+}
+
+#Start .start-import-container {
+    position: relative;
+}
+#Start .start-import-container input {
+    all: unset;
+    color: transparent;
+    cursor: pointer;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+#Start .start-import-container input:hover { cursor: pointer;  }
+#Start .Footer {
+    border: 0;
+    bottom: 0;
+    height: 20px;
+    position: absolute;
+    right: 0;
+}
+
+#Menu {
+    background: var(--color-orange);
+    bottom: 0;
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    z-index: 10000000;
+}
+#Menu button {
+    all: unset;
+    border-right: 1px solid var(--color-black);
+    cursor: pointer;
+    font-weight: bold;
+    height: 100%;
+    min-width: max-content;
+    padding: 0 10px;
+}
+#Menu button:hover {
+    background-color: var(--color-orange-hover);
+}
+#Menu .right {display: flex;}
+#Menu .right >*{border: 0; border-left: 1px solid black;}
+.menu-item-days-container { display: flex; overflow: auto; }
+#Menu-item-days { display: flex; }
+#Menu .menu-item-days-container .chevron-left, #Menu #Menu-item-export { border-left: 1px solid var(--color-black); }
+#Menu #Menu-item-export { border-right: 0; }
+#Menu #Zoom-roster { background: white; height: 9px; box-sizing: border-box; margin: auto 20px auto 8px; width: 100px; }
+
+#Menu-item-week {display: flex; }
+#Menu-week-select {background: transparent; height: 100%; border-right: 1px solid black; border-radius: 0; width: 20px; overflow: hidden; }
+#Menu-week-select:hover {background: var(--color-orange-hover)}
+#Menu-week-select:before {right: 6px; top: 5px;}
+#Menu-week-select select { min-width: unset; max-width: 20px; border-radius: 0; border: 0; padding: 0; cursor: pointer; }
+
+
+#Menu-settings >*.active {background: var(--button-normal-active-background);}
+#Menu-settings.visible >*.active {background: white;}
+#Menu-settings:not(.active):not(.visible) {width: 30px; overflow: hidden; border-radius: 0 0 8px 0;}
+#Menu-settings:not(.active):not(.visible) > *:not(.toggle-menu) {opacity: 0; }
+#Menu-settings .toggle-menu { all: unset; background: transparent; position: absolute; left: 0; top: 0; width: auto; min-width: auto;    z-index: 1; width: 30px; height: 100%; align-items: center; justify-content: center;}
+#Menu-settings:not(.active) .toggle-menu { display: flex !important;}
+#Menu-settings:not(.active):not(.visible) .toggle-menu .left {display: none; }
+#Menu-settings:not(.active) .toggle-menu .right {display: flex !important; }
+#Menu-settings:not(.active).visible .toggle-menu .right {display: none !important; }
+#Menu-settings:not(.active) h3 {display: none;}
+#Menu-settings { background: var(--color-lightblue); display: flex; width: 100%; align-items: center; justify-content: flex-end; position: fixed; top: 0; left: 0; z-index: 111111; transition: all ease .4s}
+#Menu-settings h3 { margin: 0 auto 0 20px; }
+#Menu-settings >*:not(h3) { border-radius: 0; border-right: 0; font-weight: bold; color: gray; min-height: 40px; position: relative; cursor: pointer; font-family: Arial, Helvetica, sans-serif; min-width: 96px; box-sizing: border-box; padding: 4px 10px; border: 1px solid var(--button-normal-border); display: flex; justify-content: center; align-items: center; background: white; }
+#Menu-settings >*.active { color: black;}
+#Menu-settings >label {position: relative; cursor: pointer; font-family: Arial, Helvetica, sans-serif; width: 96px !important; box-sizing: border-box; display: flex !important; justify-content: center; align-items: center; margin: 0 !important; background: white; border: 1px solid var(--button-normal-border); border-right: 0;}
+#Menu-settings >*:not(h3):hover {background-color: var(--button-normal-hover-background) !important;}
+#Menu-settings .dropdown:hover >div {display: flex !important}
+#Menu-settings .dropdown >div {flex-direction: column; position: absolute; top: 38px; left: -1px;}
+#Menu-settings .dropdown >div button {border-radius: 0; border-top: 0; color: gray !important; text-align: left;}
+#Menu-settings .dropdown >div button:hover {color: black !important;}
+#Menu-settings .dropdown.active.closingtime button.closingtime {color: black !important; background: var(--button-normal-active-background);}
+#Menu-settings .dropdown.active.vacation button.vacation {color: black !important; background: var(--button-normal-active-background);}
+
+
+.main-import-container {
+    grid-area: import;
+    margin-left: auto;
+    margin-top: -40px;
+    text-align: center;
+    align-items: center;
+    background-color: orange;
+    display: flex;
+    float: right;
+    font-weight: bold;
+    height: 40px;
+    justify-content: center;
+    opacity: .6;
+    position: relative; 
+    width: 130px;
+}
+.main-import-container input {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    cursor: pointer;
+    font-size: 0;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#Is-visitor-text {color: var(--color-red); margin: 8px 0 8px 100px; position: fixed; top: 0; left: 0; z-index: 1111111; background: var(--color-lightblue-background);}
+
+.main-container { box-sizing: border-box; height: 100%; max-height: 100%; overflow: auto; position: relative; scroll-snap-type: y mandatory;}
+
+#Settings-container {height: 100%; display: flex; width: 100%; }
+#Settings-container >* {width: 100%;}
+
+#Settings { display: flex; flex-direction: column; padding-top: 32px; }
+#Settings > h1 { margin-top: 40px;}
+#Settings .settings-box { background: white; box-sizing: border-box; padding: 16px; }
+#Settings #Settings-default { display: flex; flex-direction: column; padding: 0;}
+#Settings-default >h2 { padding: 16px 16px 0;}
+#Settings #Settings-default > button { margin-bottom: 8px; text-align: center; }
+#Settings .settings-box .container { display: none; }
+#Settings .settings-box.active .container { display: inline-block; overflow: auto; padding: 0 16px 40px; grid-area: con; min-width: max-content;}
+#Settings-default .container .container-buttons { display: flex; margin-left: -16px; text-align: center; margin-bottom: 8px; position: sticky; top: 0; padding-top: 16px; background: linear-gradient(white 80%, transparent);}
+#Settings-default .container .container-buttons button { border-radius: 0; width: 100%; max-width: 190px;  margin-bottom: 20px; }
+#Settings-default .container .container-buttons button.button-remove {    grid-area: rem; }
+#Settings-default .container .container-buttons button.button-save {    grid-area: sav; }
+#Settings-weekly-button {border-left: 0;}
+
+#Settings .settings-item { margin-bottom: 8px; }
+#Settings label { display: inline-block; margin-right: 8px; width: 120px; white-space: nowrap; }
+#Settings select { width: 80px; }
+#Settings #Week-select { display: flex; grid-area: week-select; }
+#Settings #Week-select >* { max-height: 32px; box-sizing: border-box; }
+#Settings #Week-select #Roster-week-input { display: flex; align-items: center; }
+#Settings #Week-select button { border-radius: 0; border-left: 0; min-width: max-content; }
+#Settings #Week-select button:nth-child(2) { border-left: 1px solid var(--button-normal-border); border-radius: 20px 0 0 20px; margin-left: 8px; }
+#Settings #Week-select button:nth-child(4) { border-radius: 0 20px 20px 0; }
+#Settings #Week-select #Week-select-overview { margin-left: 8px; }
+
+#Sort-roster-by { display: flex; align-items: center; gap: 8px; position: sticky; top: 0; float: right; z-index: 11111;}
+#Sort-roster-by button:nth-child(1) {border-radius: 0 0 0 10px;}
+#Sort-roster-by button:nth-child(2) {border-radius: 0;}
+#Sort-roster-by button:nth-child(3) {border-radius: 0 0 10px 0; border-right: 1px solid var(--button-normal-border);}
+
+
+#Roster-week-buttons-edit-sort {display: flex; gap: 8px; padding-left: 240px; padding-top: 18px; margin-bottom: -42px;}
+
+#Table-week-editable-button { max-width: 200px;}
+#Sort-week-by { }
+.sort-box {display: flex; }
+.sort-box button {border-right: 0;}
+.sort-box button:nth-child(1) {border-radius: 20px 0 0 20px;}
+.sort-box button:nth-child(2) {border-radius: 0;}
+.sort-box button:nth-child(3) {border-radius: 0 20px 20px 0; border-right: 1px solid var(--button-normal-border);}
+.sort-box button.active +button { border-left: 1px solid white;}
+
+#Settings-day-time-change { align-items: center; display: grid; grid-template-columns: auto 1fr; grid-gap: 0 8px; max-width: max-content; min-width: max-content; }
+#Settings-day-time-change .select-name { padding-right: 8px; }
+#Settings-day-time-change .select-start-end { min-width: max-content; }
+#Settings-day-time-change .select-start-end label { margin-right: 0; }
+
+#Settings-day-time-change .select-start select { border-right: 0; border-radius: 20px 0 0 20px; }
+#Settings-day-time-change .select-end select { border-radius: 0 20px 20px 0; }
+
+#settings-global .title-container { align-items: center; display: flex; gap: 16px; }
+#Settings-global .title-container button { min-height: 26px; height: 26px; }
+#Settings-global .button-add { border-radius: 0; margin-left: -18px; margin-bottom: 8px; padding-left: 18px;}
+#Settings-global .button-remove { margin-left: 16px; padding: 4px 10px;}
+
+#Settings-global-departments > div{margin-bottom: 8px;}
+#Settings-global-departments > div:not(.title-container){display: flex;}
+
+#Settings-global-editable-week { margin-bottom: 16px; }
+
+#Settings-global-editable-week .button-default-cell { margin-right: 6px; }
+#Settings-global-editable-week .button-default-row { border-radius: 20px 0 0 20px;}
+#Settings-global-editable-week .button-default-row.active { border-right: 1px solid white;}
+#Settings-global-editable-week .button-default-row-bottom { border-radius: 0 20px 20px 0; border-left: 0; }
+
+#Settings-global-labels .items {display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+#Settings-global-labels .item { align-items: center; display: flex;}
+#Settings-global-labels .item >*:nth-child(1) {width: auto;}
+#Settings-global-labels .item >*:nth-child(2) {width: 100%; max-width: 122px; margin-right: 16px; min-width: 122px; box-sizing: border-box;}
+#Settings-global-labels .item >*:nth-child(3) {width: auto;}
+#Settings-global-labels .item >*:nth-child(4) {max-width: 46px;}
+#Settings-global .add-container {padding: 0 8px 8px 18px; margin-bottom: 8px;margin-top: -34px; margin-left: -18px; background: white; z-index: 1; position: relative; background: var(--color-lightblue-background)}
+#Settings-global .add-container .cancel {border-radius: 0; margin-left: -18px; margin-bottom: 8px; padding-left: 18px;}
+#Settings-global .add-container label {width: auto; }
+#Settings-global .add-container input {background: white; }
+#Settings-global .add-container input { width: 100%; max-width: 122px; margin-right: 16px; min-width: 122px; box-sizing: border-box; }
+#Settings-global .add-shiftlabel input.cut { max-width: 46px; min-width: 46px;    box-sizing: content-box; }
+
+#Settings-global-rename-fields {margin-top: 16px;}
+#Settings-global-rename-fields .item { display: flex; gap: 16px; margin-bottom: 8px;}
+#Settings-global-rename-fields .item >div { align-items: center; display: flex; min-width: unset; } 
+#Settings-global-rename-fields .item >div label { width: auto; } 
+#Settings-global-rename-fields .item >div:nth-child(1) input { max-width: 100px; }
+#Settings-global-rename-fields .item >div:nth-child(2) input { max-width: 46px; }
+
+#Person-container { display: flex; flex-direction: column; }
+#Person-container .button-add-person { text-align: center; width: max-content; border-radius: 0 0 10px 10px; }
+#Person-container.active .button-add-person { display: inline-block;}
+#Person tbody {position: relative;}
+#Person tbody:after {content: ""; position: absolute; height: 100%; left: 0; top: 0; width: 100%; z-index: 1; }
+#Person-container.active #Person tbody:after { display: none;}
+
+#Person, #Person th, #Person td { border: 0; }
+#Person { 
+    display: block;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    min-height: 200px;
+    margin: 0;
+    overflow: -moz-scrollbars-vertical; 
+    overflow: auto;
+    padding-top: 0 !important;
+    position: relative;
+    white-space: nowrap;
+    max-height: calc(100vh - 204px);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+#Person thead { position: sticky; top: 0; z-index: 1; }
+#Person thead th { background-color: white; border-bottom: 2px solid black !important;}
+#Person th, #Person td { border-bottom: 1px solid black; padding: 8px; text-align: left; border-right: 1px solid lightgray;}
+#Person th:last-child, #Person td:last-child { border-right: 0; }
+#Person th:first-child, #Person td:first-child { padding-left: 18px; }
+#Person th:last-child, #Person th:last-child { padding-right: 18px; }
+#Person-list-buttons {display: flex;}
+#Person-list-buttons button { min-height: 20px; border-bottom: 0; border-right: 0; padding: 0; min-width: 82px;}
+#Person-list-buttons button:hover { border-left: 1px solid white;}
+#Person-list-buttons button:nth-child(1) { border-radius: 5px 0 0 0;}
+#Person-list-buttons button:nth-child(2) { border-radius: 0;}
+#Person-list-buttons button:nth-child(3) { border-radius: 0 5px 0 0; border-right: 1px solid var(--button-normal-border);}
+#Person .Person-tr { position: relative; }
+#Person .Person-tr:not(.inactive):hover td { background: var(--color-lightblue); }
+#Person .Person-tr.inactive { background-color: var(--color-blue) !important;}
+#Person .Person-tr td.labels { font-size: 12px; padding: 2px 8px;}
+#Person .Person-tr td.labels >div { display: inline-block; margin-right: 3px; }
+#Person .Person-tr td.labels >div >div { border-right: 1px solid gray; padding-right: 2px; }
+#Person .Person-tr td.labels >div:last-child >div { border-right: 0; }
+#Person .Person-tr td.mpa { font-size: 12px; padding: 2px 8px;}
+#Person .Person-tr td.mpa >div { display: inline-block; margin-right: 3px; }
+#Person .Person-tr td.mpa >div >div { border-right: 1px solid gray; padding-right: 2px; }
+#Person .Person-tr td.mpa >div:last-child >div { border-right: 0; }
+#Person .td-overflow { max-width: 62px; position: relative; }
+#Person .td-overflow >div { overflow: hidden; display: inline-block; max-width: 100%; }
+
+#Person tr:last-child td { padding-bottom: 8px; }
+#Person tbody tr:hover { background-color: var(--color-lightblue); cursor: pointer; }
+#Person tr:hover .td-overflow:hover >div { background: white; min-width: max-content; overflow-x: unset; padding-right: 4px; }
+
+
+#Edit-person { 
+    background-color: var(--color-transparent-white);
+    cursor: pointer;
+    display: none; 
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10001;
+}
+#Edit-person.active { display: flex; }
+#Edit-person-container { 
+    background-color: white;
+    border: 1px solid var(--color-lightblue);
+    border-radius: 8px;
+    cursor: unset;
+    margin: auto; 
+    max-height: calc(100vh - 100px);
+    overflow: auto;
+    position: relative;
+    z-index: 1;
+}
+#Edit-person-container > div { cursor: unset; }
+#Edit-person-container input, #Edit-person-container select { width: 128px; height: 26px; box-sizing: border-box; }
+#Edit-person-container select { padding: 3px 10px; }
+#Edit-person-container input[type=number] { box-sizing: border-box; width: 72px; }
+#Edit-person-container .button-add { min-height: 26px; }
+#Edit-person-container .edit-box { border-bottom: 1px solid var(--color-lightblue); padding: 20px; position: relative;}
+#Edit-person-container .edit-box .title { display: inline-block; font-weight: bold; margin-bottom: 4px; min-width: 130px; width: 100%;}
+#Edit-person-container .edit-box .container { max-height: 150px; overflow: auto; }
+#Edit-person-container .remove { position: absolute; right: 0; top: 0; z-index: 1;}
+#Edit-person-container .remove button { 
+    border-top: 0;
+    border-right: 0;
+    border-radius: 0 0 0 10px;
+    font-weight: bold;
+    letter-spacing: .03em; 
+    padding: 0 10px;
+    margin: 0;
+    min-height: 26px;
+    opacity: .6;
+}
+#Edit-person-container .person-container { display: flex; gap: 16px; padding: 0;}
+#Edit-person-container .person-container >.container { border-right: 1px solid var(--color-lightblue); display: flex; gap: 16px; max-width: unset; padding: 35px 20px 20px; position: relative;}
+#Edit-person-container .person-container >.container > div { display: flex; flex-direction: column; }
+#Edit-person-container .person-container >.container .title {min-width: unset;}
+#Edit-person-container .person-container >.container .select-assign-to select { min-width: 150px; }
+#Edit-person-container .person-container >.activation { display: flex; flex-direction: column; margin-left: auto; padding: 35px 0 20px 0}
+#Edit-person-container .person-container >.activation .title { min-width: 127px; }
+#Edit-person-container .person-container label { margin-bottom: 6px; }
+#Edit-person-container .select-assign-container { position: absolute; right: 0; top: 0;}
+#Edit-person-container .chevron-select { display: inline-block; min-height: 26px; }
+#Edit-person-container .chevron-select select { min-height: 26px;  padding: 4px 10px 0;}
+#Edit-person-container .select-assign-to.chevron-select select { border-radius: 0 0 0 10px; border-top: 0; border-right: 0; }
+#Edit-person-container .chevron-select:before { top: 0; }
+
+#Edit-person-shift-settings .container {display: flex;}
+#Edit-person-shift-settings .edit-person-shift-settings-day {padding: 0 8px; border-left: 1px solid var(--color-lightblue); border-right: 1px solid var(--button-normal-border); margin-left: 1px; overflow: auto; }
+#Edit-person-shift-settings .edit-person-shift-settings-day:first-child {padding-left: 0; border-left: 0; margin-left: 0; }
+#Edit-person-shift-settings .edit-person-shift-settings-day:last-child {border-right: 0; }
+#Edit-person-shift-settings .button-activate-container {background: white; position: sticky; top: 0; z-index: 111;}
+#Edit-person-shift-settings .button-activate { width: 100%; min-height: 26px; margin-bottom: 8px;}
+#Edit-person-shift-settings .button-free { width: 100%; min-height: 26px; justify-content: center; }
+#Edit-person-shift-settings .container label {min-width: 100px;}
+#Edit-person-shift-settings .container button {min-height: 26px; width: 100%}
+#Edit-person-shift-settings .container input {background-color: white;}
+#Edit-person-shift-settings .container .item {display: flex; align-items: center; margin-bottom: 6px; flex-direction: column; gap: 6px; justify-content: center; }
+#Edit-person-shift-settings .container .item.active:not(.button-free) { background: var(--color-lightblue-background); border: 1px solid var(--button-normal-border); padding: 6px;}
+#Edit-person-shift-settings .container .item-average input { width: 72px; }
+
+#Edit-person-container .freedays button { border-radius: 0; border-left: 0; line-height: 2px; margin-top: 4px; min-height: 26px; text-align: center; }
+#Edit-person-container .freedays button:first-child { border-radius: 20px 0 0 20px; border-left: 1px solid var(--button-normal-border); }
+#Edit-person-container .freedays button:last-child { border-radius: 0 20px 20px 0; }
+#Edit-person-container .freedays button.active { background-color: var(--button-normal-active-background); }
+#Edit-person-mpa .container { display: flex; gap: 16px; }
+#Edit-person-mpa .item label { width: auto; margin-right: 6px; }
+#Edit-person-container .edit-close { bottom: 0; border: 0; border-radius: 0 0 8px 8px; left: 0; position: sticky; text-align: center; width: 100%; z-index: 11;}
+
+#Edit-person-container .container-add {padding: 0 20px 8px 20px; margin-bottom: 8px; margin-left: -20px; background: white; z-index: 1; position: relative; width: calc(100% + 20px); transition: all ease .25s; }
+#Edit-person-container .container-add.active { background: var(--color-lightblue-background);  display: grid; grid-template-areas: "cancel cancel cancel" "start end save"; grid-template-columns: auto auto 1fr; gap: 8px; padding-bottom: 20px;}
+#Edit-person-container .container-add:not(.active) >*:not(.button-add) {display: none;}
+#Edit-person-container .container-add .button-add {grid-area: save;}
+#Edit-person-container .container-add.active .button-add {max-width: max-content;}
+#Edit-person-container .container-add:not(.active) .button-add {border-radius: 0; border-left: 0; margin-left: -20px; padding-left: 20px; width: 111px;}
+#Edit-person-container .container-add .button-cancel {grid-area: cancel; grid-area: cancel; width: 111px; margin-left: -20px; border-radius: 0; padding: 4px 10px 4px 20px; min-height: 26px; }
+#Edit-person-container .container-add input {background: white;}
+#Edit-person-container .container-add .start {grid-area: start}
+#Edit-person-container .container-add .end {grid-area: end}
+#Edit-person-betterments .container-add.active {grid-template-areas: "cancel cancel cancel cancel" "start end hours save"; grid-template-columns: auto auto auto 1fr;}
+#Edit-person-betterments .container-add.active .hours {grid-area: hours;}
+#Edit-person-betterments .container-data .item >*:nth-child(2) { width: auto; display: flex; justify-content: center; align-items: center; }
+#Edit-person-betterments .container-data .item >*:nth-child(3) { width: 68px; margin: 5px; }
+
+.edit-person-table-container > .container { margin-top: 16px; }
+.edit-person-table-container .container-data { display: flex; border-top: 1px solid var(--color-black); }
+.edit-person-table-container .container-data .year { border-right: 1px solid var(--color-black); padding: 8px 8px 8px 0; }
+.edit-person-table-container .container-data .item { display: flex; }
+.edit-person-table-container .container-data .item button { min-height: unset; padding: 0 8px; font-size: 13px; line-height: 15px; height: auto; min-width: unset; }
+.edit-person-table-container .container-data .item >*:nth-child(2) { width: 68px; margin: 5px; }
+.edit-person-table-container .container-data .date { padding: 8px 16px 8px 8px; }
+.edit-person-table-container .container-data .description { padding: 8px 16px 8px 8px; }
+
+#Edit-person-overtime .container-add { display: inline-block;}
+#Edit-person-overtime .container-add select { min-height: 26px; padding: 4px 10px 0; width: 100px;}
+#Edit-person-overtime .container-add > input {max-width: 82px;}
+#Edit-person-overtime table {border: 0;}
+#Edit-person-overtime table th, #Edit-person-overtime table td {padding: 4px 8px;}
+#Edit-person-overtime table th:first-child, #Edit-person-overtime table td:first-child {border-left: 0;}
+#Edit-person-overtime table th:last-child, #Edit-person-overtime table td:last-child {border-right: 0;}
+#Edit-person-overtime table tbody tr:last-child td {border-bottom: 0;}
+
+
+#Roster-days-container { scroll-snap-type: y mandatory; position: relative;}
+#Roster-days-container .Roster-container { display: inline-block; max-width: 100%; max-height: 100%;  position: relative; scroll-snap-align: start; overflow: auto;    min-width: 100%; min-height: 50%}
+#Roster-days-container .Roster-container > h2{ background-color: var(--color-normal-background); position: sticky; left: 0; margin: 0; padding: 0.83em 0; z-index: 101; }
+#Roster-days-container .Roster-container-head { 
+    background: var(--color-normal-background);
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    left: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: sticky; 
+    top: 0;
+    z-index: 1001;
+}
+#Roster-days-container .Roster-container .container-copy-from-to { display: flex; }
+#Roster-days-container .Roster-container .select-copy-from { border-radius: 8px 0 0 0; padding: 6px 10px 2px; }
+#Roster-days-container .Roster-container .select-copy-to { border-radius: 0 8px 0 0; padding: 6px 10px 2px; border-left: 0; }
+#Roster-days-container .Roster-container .time-scroll-container { display: flex; }
+#Roster-days-container .Roster-container .time-scroll-container button { 
+    border-bottom: 0;
+    border-radius: 0;
+    border-right: 0;
+    min-width: auto;
+    padding: 4px 6px;
+    text-align: center;
+    width: 37px;
+}
+#Roster-days-container .Roster-container .time-scroll-container button:first-child { border-radius: 8px 0 0 0; }
+#Roster-days-container .Roster-container .time-scroll-container button:last-child { border-radius: 0 8px 0 0; border-right: 1px solid var(--button-normal-border); }
+#Roster-days-container .Roster-container .button-remove-day-shifts { border: 0; border-radius: 8px 8px 0 0; padding-top: 7px; position: sticky; right: 0; text-align: center; transform: translateY(1px); }
+
+
+
+.table-times { border-left: 0; position: relative; overflow: auto !important; }
+#Roster-days-container .tables-container { display: flex; min-width: max-content; margin-bottom: 40px; position: relative; }
+
+#Roster-days-container .button-edit-table {
+    all: unset;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--color-transparent-lightblue);
+    box-sizing: border-box;
+    color: var(--color-lightblack);
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+#Roster-days-container .button-edit-table > div { position: sticky; left: 50%; width: max-content; top: calc(50% + 50px); transform: translate(-50%, -50%); }
+#Roster-days-container .Roster-container .line-cursor > div { color: var(--color-black); display: inline-block; font-size: 14px; white-space: pre;}
+#Roster-days-container .Roster-container .line-v {
+    display: none;
+    background: linear-gradient(rgba(255,255,255,1) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 0), #75a5b5;
+    background-size: auto 2px;
+    bottom: 40px;
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 0;
+    z-index: 10000;
+}
+#Roster-days-container .Roster-container .line-h {
+    display: none;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 0), #75a5b5;
+    background-size: 2px auto;
+    height: 0;
+    width: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 10000;
+}
+
+#Roster-days-container table { border-collapse: collapse; z-index: 1; overflow: hidden; }
+#Roster-days-container table thead tr:first-child { background: var(--color-normal-background); position: sticky; top: 10px; z-index: 11;}
+#Roster-days-container table th { padding: 0 8px; height: 68px; }
+#Roster-days-container table th:first-child { padding: 0; position: sticky; min-width: 200px; box-sizing: border-box; left: 0; z-index: 1001; line-height: 30px; font-size: 16px; vertical-align: bottom; border-left: 0;}
+#Roster-days-container table th:first-child >div { background-color: var(--color-normal-background); box-sizing: border-box; padding-left: 28px; left: 0; z-index: 1001; line-height: 30px; font-size: 16px; vertical-align: bottom; height: 100%; width: 100%; display: flex; justify-content: center; align-items: flex-end; max-width: calc(100% - 28px); border-left: 1px solid black;}
+#Roster-days-container table th:last-child { vertical-align: bottom; background-color: var(--color-normal-background);}
+#Roster-days-container tr.active {position: relative; z-index: 100;}
+#Roster-days-container tr.hover td:not(.td-name) { border: 1px solid var(--color-outline-hover) !important; border-left: 0 !important;}
+#Roster-days-container tr.hover td.td-name { border-color: var(--color-outline-hover) !important; box-shadow: inset 0 0 4px var(--color-outline-hover);}
+#Roster-days-container tr.hover +tr td { border-top-color: var(--color-outline-hover) !important; }
+#Roster-days-container tr.hover .td-top-bottom { border-color: var(--color-outline-hover) !important; position: relative;}
+#Roster-days-container tr th .th-amount-container.active { color: var(--color-lightblue); }
+#Roster-days-container tr th .th-amount-container { cursor: pointer; display: flex; }
+#Roster-days-container tr th .th-amount-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 4px;
+    opacity: .7;
+    padding: 3px 0;
+}
+#Roster-days-container tr th .th-amount-buttons button {
+    all: unset;
+    cursor: pointer; 
+    line-height: 0.5;
+    padding: 4px;
+}
+#Roster-days-container tr th .th-amount-buttons button:hover { color: gray; }
+#Roster-days-container tr th .th-amount-buttons button:before { font-size: 21px; }
+#Roster-days-container tr th .th-amount-buttons button.chevron-up { padding-bottom: 0; }
+#Roster-days-container tr th .th-amount-buttons button.chevron-down { padding-top: 0; }
+
+
+#Roster-days-container td, #Roster-days-container th { position: relative; min-width: 68px; }
+#Roster-days-container td {border: 1px solid var(--color-black); border-bottom: 0;}
+
+#Roster-days-container tr td { height: 48px !important; max-height: 48px !important; padding: 0; vertical-align: bottom; }
+#Roster-days-container tr.disabled td:not(td:first-child) { border-style: dotted; opacity: .5; }
+#Roster-days-container tr.disabled +tr td:not(td:first-child) { border-top-style: dotted; }
+#Roster-days-container tr td:nth-child(2) {border-left: 0;}
+#Roster-days-container tr td .td-name-hours-container { display: grid; grid-template-areas: "name top" "name bottom"; grid-template-columns: 1fr auto;}
+#Roster-days-container tr td .td-name-container { display: grid; gap: 0 4px; grid-template-areas: "name overtime" "hours hours"; grid-template-columns: 1fr auto; height: 100%; }
+#Roster-days-container tr td.td-sticky { position: -webkit-sticky; position: sticky; left: 0; z-index: 10;}
+#Roster-days-container tr td.td-name { padding: 0; vertical-align: top; border-bottom: 0; border-left: 0; border-right: 0;}
+#Roster-days-container tr td.td-name.active { background-color: var(--button-normal-active-background) !important; z-index: 100; }
+#Roster-days-container tr td.td-name .name { padding: 4px 0 0 6px; white-space: nowrap; }
+
+
+
+#Roster-days-container tr td.td-name-hours-container { border-left: 1px solid var(--color-black);}
+#Roster-days-container tr td.td-name-hours .td-top-bottom { border-left: 1px solid var(--color-black); }
+#Roster-days-container tr td.td-name-hours .td-top { display: flex; grid-area: top; }
+#Roster-days-container tr td.td-name-hours .td-bottom { display: flex; justify-content: space-between; }
+#Roster-days-container tr td.td-name-hours .button-menu { grid-area: menu; margin: 0 0 0 auto; border-left: 1px solid var(--color-gray); border-bottom: 1px solid var(--color-gray); border-right: 1px solid black; border-radius: 0 0 0 8px; width: 26px; box-sizing: border-box; }
+#Roster-days-container tr td.td-name-hours .button-menu[disabled="true"] { cursor: unset; opacity: 0; }
+#Roster-days-container tr td.td-name-hours div.button-menu { opacity: 0;}
+#Roster-days-container tr td.td-name-hours .menu { 
+    background-color: white;
+    border: 1px solid var(--color-black);
+    display: none; 
+    min-height: 36px;
+    min-width: 120px;
+    position: absolute;
+    right: 27px;
+    top: 0;
+    transform: translateX(100%);
+    white-space: nowrap;
+    z-index: 1;
+}
+#Roster-days-container tr td.td-name-hours .menu.active { display: inline-block; }
+#Roster-days-container tr td.td-name-hours .menu > div { display: flex; flex-direction: column; }
+#Roster-days-container tr td.td-name-hours .menu p { padding: 0 8px; }
+#Roster-days-container tr td.td-name-hours .menu button.button-remove { border-radius: 0; border: 0; text-align: left; padding: 8px;}
+#Roster-days-container tr td.td-name-hours .menu button:not(.button-remove) { all: unset; background: var(--color-orange); border-top: 1px solid var(--color-black); cursor: pointer; padding: 8px; }
+#Roster-days-container tr td.td-name-hours .menu button:not(.button-remove):hover { background-color: var(--color-orange-hover); }
+#Roster-days-container tr td.td-name-hours .menu button.prev-next {background: var(--color-darkorange)}
+#Roster-days-container tr td.td-name-hours .menu button.prev-next:hover {background: var(--color-darkorange-hover)}
+#Roster-days-container tr td.td-name-hours .menu .menu-extras .free:first-child { border-top: 3px solid var(--color-black); }
+#Roster-days-container tr td.td-name-hours .menu >div *.free { background-color: var(--color-lightblue); border-top: 1px solid var(--color-black);}
+#Roster-days-container tr td.td-name-hours .menu >div *.free:hover { background-color: var(--color-blue); }
+#Roster-days-container tr td.td-name-hours .menu .menu-extras { display: flex; flex-direction: column;}
+#Roster-days-container tr td.td-name-hours .menu .menu-extras >div { align-items: center; display: flex; justify-content: space-between; padding-left: 8px; }
+#Roster-days-container tr td.td-name-hours .menu .menu-extras input { background: white; box-sizing: border-box; width: 72px; }
+
+
+#Roster-days-container tr td.td-name-after { text-align: center; vertical-align: middle; padding: 0 4px;}
+#Roster-days-container tr td.td-name .td-overtime { align-items: center; display: flex; font-size: 12px; grid-area: overtime; justify-content: center; margin-right: 6px; opacity: .7;}
+#Roster-days-container tr td.td-name .td-overtime.red { color: var(--color-text-red); }
+#Roster-days-container tr td.td-name .td-overtime.orange { color: var(--color-text-orange); }
+#Roster-days-container tr td.td-name .td-overtime.green { color: var(--color-text-green); }
+#Roster-days-container tr td.td-name-hours .td-info { grid-area: info; margin: 0 6px 0 0; position: relative; z-index: 1;}
+#Roster-days-container tr td.td-name-hours .td-info button { border-color: var(--color-gray); border-radius: 0 0 28px 28px; border-top: 0; grid-area: info; }
+#Roster-days-container tr td.td-name-hours .td-info button.set { background: var(--color-yellow); color: var(--color-blue); }
+#Roster-days-container tr td.td-name-hours .td-info textarea { position: absolute; left: 0; top: 0; }
+
+#Roster-days-container td .hours-container { align-items: flex-end; display: flex; font-size: 14px; gap: 4px; grid-area: hours; justify-content: space-between; width: 100%; }
+#Roster-days-container tr .hours-amount { padding: 4px 0 4px 6px; }
+#Roster-days-container tr .hours-mpa { margin-left: auto; opacity: 0.7; padding: 2px 0 0; }
+#Roster-days-container tr .hours-mpa >div { padding: 0 6px; width: 28px; }
+#Roster-days-container tr .hours-mpa >div.title { font-size: 10px; }
+#Roster-days-container tr .hours-given { opacity: .8; }
+#Roster-days-container tr .hours-today { align-items: flex-end; display: flex; justify-content: flex-end; padding: 4px 6px 4px 0; }
+#Roster-days-container tr .break-today { align-items: flex-end; display: flex; padding: 4px 6px; }
+#Roster-days-container .td-day-time {
+    overflow: hidden;
+}
+#Roster-days-container .td-day-time .container {
+    display: grid;
+    grid-template-rows: 11px 1fr auto;
+    grid-template-areas:
+    "header"
+    "add"
+    "mod";
+    height: 100%;
+    width: 100%;
+}
+#Roster-days-container .td-day-time.free .container { display: flex; justify-content: center; align-items: center; }
+#Roster-days-container .assigned .container { background-color: green; }
+#Roster-days-container .td-day-time .container > p{ margin: 4px auto; max-width: 68px; }
+
+
+
+#Roster-days-container .shift-split {
+    all: unset;
+    background-color: var(--color-lightred);
+    border-left: 1px solid var(--color-black);
+    cursor: pointer;
+    display: flex;
+    grid-area: header;
+    margin-left: auto;
+    opacity: .4;
+    width: 25px;
+}
+#Roster-days-container .shift-split:hover { background-color: var(--color-red); opacity: .8; }
+#Roster-days-container .shift-split:after { font-size: 12px; line-height: 10px; }
+
+#Roster-days-container .shiftmodify-buttons-container {
+    display: flex;
+    grid-area: add;
+    height: 100%;
+    min-height: 50%;
+    width: 100%;
+}
+#Roster-days-container .shiftmodify-buttons-container button {
+    border-color: var(--color-lightgray);
+    border-radius: 0;
+    color: var(--color-lightgray);
+    height: 100%;
+    min-width: unset;
+    padding: 0 8px;
+}
+#Roster-days-container .roster-add-extra-shift {    
+    all: unset;
+    color: gray;
+    cursor: pointer;
+    grid-area: header;
+    font-size: 11px;
+    line-height: 10px;
+    text-align: center;
+    background: var(--color-whiteblue);
+}
+#Roster-days-container .roster-add-extra-shift:hover { color: var(--color-black); background-color: var(--color-lightblue)}
+#Roster-days-container .shiftmodify-buttons-container .roster-add-shift {
+    background-color: var(--color-whitegray);
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    color: gray;
+    cursor: pointer;
+    height: 100%;
+    opacity: .8;
+    order: 2;
+    padding: 0;
+    position: relative;
+    margin: 0;
+    min-height: unset;
+    min-width: unset;
+    width: 100%;
+}
+#Roster-days-container .shiftmodify-buttons-container .roster-add-shift:hover { background-color: var(--button-normal-hover-background); opacity: 1; }
+#Roster-days-container .shiftmodify-buttons-container .button-extend-shorten {
+    all: unset;
+    align-items: center;
+    background: var(--color-whitegray);
+    border-top: 1px solid gray;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding: 0 3px;
+    width: 50%;
+}
+#Roster-days-container .shiftmodify-buttons-container .button-extend-shorten:hover { background: var(--color-whiteblue); }
+#Roster-days-container .shiftmodify-buttons-container .button-extend-shorten:before {
+    line-height: 0.5;
+}
+
+#Roster-days-container .roster-extend-shift { margin-left: auto; background-color: var(--color-whitegray); border-bottom: 0; }
+#Roster-days-container .roster-extend-shift:before { color: var(--color-gray); }
+#Roster-days-container .roster-extend-shift:hover { background-color: var(--button-normal-hover-background); border-color: gray; color: gray; }
+#Roster-days-container .roster-extend-shift.chevron-left { margin-left: auto; border-right: 0; order: 3;}
+#Roster-days-container .roster-extend-shift.chevron-right { margin-right: auto; border-left: 0; order: 1;}
+
+#Roster-days-container .shiftmodify-buttons-container-inner { display: flex; grid-area: mod; }
+#Roster-days-container .shiftmodify-buttons-container-inner button {
+    background-color: #bfd9bf;
+    border: 0;
+    border-top: 1px solid #80808075;
+    border-radius: 0;
+    color: #80808094;
+    min-height: unset;
+    min-width: unset;
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 50%;
+}
+#Roster-days-container .shiftmodify-buttons-container-inner button:before { font-size: 23px; line-height: 16px; padding-bottom: 2px; }
+#Roster-days-container .shiftmodify-buttons-container-inner button:hover { background-color: var(--button-normal-hover-background); border-color: gray; color: gray; }
+#Roster-days-container .shiftmodify-buttons-container-inner .chevron-right { padding-right: 0; }
+#Roster-days-container .shiftmodify-buttons-container-inner .chevron-left { padding-left: 0; }
+#Roster-days-container .shiftmodify-buttons-container-inner .chevron-right:before { float: left; }
+#Roster-days-container .shiftmodify-buttons-container-inner .chevron-left:before { float: right; }
+
+
+#Roster-days-container .th-day-time { padding: 0; vertical-align: bottom; }
+#Roster-days-container .th-day-time .time { font-size: 16px; margin-bottom: 4px; margin-top: 8px; transform: translateX(-50%);}
+#Roster-days-container .th-day-time .time-amount { border-bottom: 1px solid var(--color-lightblue); display: flex; font-size: 12px; justify-content: center; line-height: 19px; opacity: .5;}
+#Roster-days-container .th-day-time .time-amount:hover { opacity: .8; }
+#Roster-days-container .th-day-time .time-amount p { margin: auto 0;}
+
+
+#Roster-container-week { max-height: calc(100vh - 40px); overflow: auto;}
+
+
+#Roster-week-view-settings-toggle-button {max-width: max-content; border-radius: 0; padding-left: 32px; padding-right: 18px; margin-bottom: -1px; }
+#Roster-week-view-settings { display: flex; flex-direction: column; padding-top: 42px; position: relative; border-top: 4px double var(--button-normal-border); transition: all ease .25s; margin-left: -32px; }
+#Roster-week-view-settings:not(.active) { max-height: 32px; overflow: hidden; } 
+#Roster-week-view-settings .settings { background: var(--color-lightblue-background); border: 1px solid var(--button-normal-border); display: flex; gap: 16px; flex-direction: column; max-width: max-content; padding: 16px 16px 16px 32px;; opacity: 1;}
+#Roster-week-view-settings:not(.active) .settings { opacity: 0; }
+#Roster-week-view-settings .settings .row { display: flex; gap: 16px; align-items: flex-end; }
+#Roster-week-view-settings .settings .row > div { min-width: 228px; }
+#Roster-week-view-settings label { display: block; margin-bottom: 4px; }
+#Roster-week-view-settings button { text-align: center; }
+#Roster-week-print-mode { display: flex; flex-direction: column;}
+#Roster-week-print-zoom { display: flex; flex-direction: column;}
+#Roster-week-print-zoom input {box-sizing: border-box; background-color: white; height: 10px; width: 100px;}
+#Roster-week-print-zoom >div { display: flex; gap: 6px; align-items: center; }
+#Roster-week-print-zoom button { all: unset; color: var(--color-lightblue); cursor: pointer; font-size: 18px; font-weight: bold; line-height: 32px;}
+#Roster-week-print-zoom button:first-child { font-size: 28px; }
+#Roster-week-print-zoom button:hover { color: #4d879b; }
+
+#Roster-week-display-overtime { width: 273px; }
+#Roster-week-add-editable-row { display: flex; flex-direction: column; gap: 6px; margin-top: 8px;}
+#Roster-week-add-editable-row button { width: 273px; }
+#Roster-week-container { margin-bottom: 40px; }
+#Roster-week-container h2 { display: inline-block; }
+#Roster-week-container > button { margin: 0 20px; display: inline-block; transform: translateY(-4px); }
+#Roster-week-container th, #Roster-week-container td { padding: 0 6px;}
+#Roster-week-container th p {margin: 8px 0; }
+#Roster-week-container td { vertical-align: top; height: 0; }
+#Roster-week-container .tr-editable td,
+#Roster-week-container .tr-editable th { padding: 8px 6px; font-weight: normal; text-align: left; vertical-align: top; }
+#Roster-week-container .td-name { display: grid; grid-template-areas: "name overtime" "hours breaks"; ; gap: 8px; margin-bottom: 6px; margin-top: 6px; }
+#Roster-week-container .td-name p:first-child { grid-area: name; }
+#Roster-week-container .td-name p:nth-child(2) { font-size: 10px; grid-area: overtime; text-align: right;}
+#Roster-week-container .td-name p:nth-child(3) { font-size: 14px; grid-area: hours; }
+#Roster-week-container .td-name p:nth-child(4) { font-size: 14px; grid-area: breaks; text-align: right; }
+#Roster-week-container .td-name p { margin: 0; }
+#Roster-week-container .Roster-week-td.free { vertical-align: middle;}
+#Roster-week-container .Roster-week-td.free p { margin: auto; font-size: 19px; }
+#Roster-week-container .Roster-week-td.free p.time { max-width: 100px; overflow: hidden; }
+.Roster-week-td .container { display: grid; font-family: Arial, Helvetica, monospace; min-width: max-content; grid-template-areas: "time time time" "break mpa duration"; grid-template-columns: 1fr auto 1fr; white-space: pre; }
+.Roster-week-td .time { margin-top: 6px; min-height: 19px; grid-area: time; text-align: center; }
+.Roster-week-td .time >div { display: flex; }
+.Roster-week-td .time p {	margin-bottom: 3px; margin-top: 0; }
+.Roster-week-editable .Roster-week-td div.time:hover {background-color: var(--button-normal-hover-background)}
+.Roster-week-editable .Roster-week-td .mpa { min-width: 14px; box-sizing: border-box;}
+.Roster-week-editable .Roster-week-td:hover .mpa { min-width: 14px; border: 1px dotted lightgray; border-bottom: 0; background-color: var(--button-normal-hover-background);}
+.Roster-week-editable .Roster-week-td:hover .mpa:hover {background-color: var(--color-orange)}
+.Roster-week-editable .Roster-week-td input:hover {background-color: var(--color-orange)}
+.Roster-week-td .mpa input,
+.Roster-week-td .time input {all: unset; -webkit-appearance: none; font-family: Arial, Helvetica, monospace; }
+.Roster-week-td .mpa input { max-width: 53px; margin-right: -12px; }
+.Roster-week-td .time input { font-size: 14px;}
+.Roster-week-td .mpa input[type="time"]::-webkit-calendar-picker-indicatorA,
+.Roster-week-td .time input[type="time"]::-webkit-calendar-picker-indicator { display: none; }
+.Roster-week-td .duration { grid-area: duration; margin: 6px 0; text-align: right; justify-content: flex-end;}
+.Roster-week-td .label { grid-area: label; text-align: center; font-size: 19px; margin: auto; display: flex; padding: 0 4px 0 2px;}
+.Roster-week-td .mpa { grid-area: mpa; margin: 0 0 2px 0; text-align: center; font-size: 11px; padding: 0 2px 0 4px;}
+.Roster-week-td .break { grid-area: break; margin: 6px 0; text-align: left; }
+.Roster-week-td .info {	max-width: fit-content; font-size: 11px; white-space: break-spaces; }
+.Roster-week-td .info >div { margin: 0 4px 4px;}
+.Roster-week-td .break, .Roster-week-td .duration { display: flex; align-items: flex-end; }
+#Roster-week-table { background: white; }
+#Roster-week-table .td-editable-cell {border-left: 4px double var(--color-black); font-weight: normal; padding-top: 6px; padding-bottom: 6px; text-align: left;  min-width: 60px; vertical-align: top;}
+
+#Roster-week-info { max-width: fit-content; }
+#Roster-week-info > div { white-space: break-spaces; margin-top: 40px; }
+
+#Popup.request-remove #Popup-container button { border-bottom: 0; border-left: 0; border-radius: 0; text-align: center; width: 50%; }
+#Popup.request-remove #Popup-container button:nth-last-child(1) { border-right: 0; }
+
+#Popup.help #Popup-container { padding: 20px; }
+#Popup.help .container > button { width: 100%; border: 1px solid var(--button-normal-border); border-radius: 0;}
+#Popup.help .container > p { display: none; cursor: unset; }
+#Popup.help .container.active > p { display: inline-block; }
+
+#Closingtimes .container-add { margin-bottom: 20px; margin-left: -18px;}
+#Closingtimes .container-add.active { background: var(--color-lightblue-background); padding: 0 8px 8px 18px; }
+#Closingtimes .container-add >button { border-radius: 0; border-left: 0; padding-left: 18px;}
+#Closingtimes .container-add.active >button { margin-left: -18px; margin-bottom: 8px; padding-left: 18px;}
+#Closingtimes .container-add.active input {background: white; }
+#Closingtimes #Set-closing-time { width: 100%; align-items: center; display: flex; }
+#Closingtimes #Set-closing-time >* { margin-right: 6px;; }
+#Closingtimes table {background: white; border-left: 0 !important; border-right: 0 !important;}
+#Closingtimes table th:first-child,
+#Closingtimes table td:first-child {border-left: 0 !important;}
+#Closingtimes table td:last-child,
+#Closingtimes table th:last-child {border-right: 0 !important;}
+#Closingtimes table, #Closingtimes table th, #Closingtimes table td { border-color: black; border-right-color: lightgray; border-left-color: lightgray; text-align: left; }
+#Closingtimes table th, #Closingtimes table td { padding: 0 6px;}
+#Closingtimes table th { padding: 4px 6px;}
+#Closingtimes table td:first-child:not(.year) { border: 0;}
+#Closingtimes table td.year { border-bottom: 0;}
+#Closingtimes .td-person { text-align: center; }
+#Closingtimes .td-person .person button {min-width: auto; margin-bottom: 4px;}
+#Closingtimes .td-person .person .container button {margin-right: 2px; }
+
+#Popup.reactivate-person #Popup-container {display: flex; justify-content: center; flex-direction: column; align-items: center; gap: 8px; padding: 20px; min-width: 248px;}
+
+#Vacations-overview table {border-left: 0; border-right: 0;}
+#Vacations-overview table thead tr { position: sticky; top: 0; z-index: 1111; }
+#Vacations-overview th {background-color: white; padding: 8px; min-width: 84px; border-right: 1px solid lightgray; border-left: 0;}
+#Vacations-overview th:last-child {border-right: 0;}
+#Vacations-overview td {position: relative; padding-top: 13px; border-right: 1px solid lightgray; border-left: 0;}
+#Vacations-overview td:last-child {border-right: 0;}
+#Vacations-overview .td-name {padding: 4px 8px; height: 39px; box-sizing: border-box; }
+#Vacations-overview .view .td-name {height: auto; }
+#Vacations-overview .table-container {overflow: auto; max-height: calc(100vh - 170px); padding-top: 20px;}
+#Vacations-overview .table-container button {border-radius: 0; z-index: 2; padding: 0; min-height: 24px; min-width: 100%; background-color: #61a64d;}
+#Vacations-overview .table-container button:hover { background-color: #9ed18f; }
+#Vacations-overview .table-container button.isClosing:hover { background-color: #fdd3a7; }
+#Vacations-overview .table-container .button-spacer { height: 24px;}
+#Vacations-overview .table-container .button-new {background-color: var(--button-normal-border); opacity: .4; width: 100%;    min-height: 13px; font-size: 10px; font-weight: bold; position: absolute; left: 0; top: 0; z-index: 1;}
+#Vacations-overview .table-container .button-new:hover {opacity: .8;}
+#Vacations-overview .table-container table tr:hover {background-color: var(--color-whiteblue);}
+#Vacations-overview .table-container table tr.active { z-index: 1111; position: relative;}
+#Vacations-overview .table-container table tr > *:first-child {background-color: white; position: sticky; left: 0; z-index: 1111}
+#Vacations-overview .table-container table tr:hover > *:first-child {background-color: var(--color-whiteblue);}
+#Vacations-overview .table-container .tr-x td {border-bottom: 4px double var(--color-black); height: auto;}
+#Vacations-overview .table-container .tr-x td:not(.td-name) { padding-top: 0; }
+#Vacations-overview .table-container .tr-x td > button {background-color: #ffaa4f; top: 0 !important;}
+#Vacations-overview .table-container td > div.isclosing {background-color: #ffaa4f;}
+#Vacations-overview .table-container.view td > button,
+#Vacations-overview .table-container.view td > div { min-height: 100%; border: 0; border-left: 1px solid white; border-right: 1px solid white; overflow: hidden; font-size: 12px; white-space: nowrap;}
+#Vacations-overview .table-container.view td > div { z-index: 200; }
+#Vacations-overview .table-container.view td > div button { padding: 4px; }
+#Vacations-overview .table-container.view td > div.isclosing button { background-color: #ffaa4f; }
+#Vacations-overview .table-container.view td > button.button-new:hover { background-color: var(--button-normal-hover-background); opacity: .8; }
+#Vacations-overview .table-container.view td > div:not(.button-new):hover { overflow: visible; width: auto !important; z-index: 300;}
+#Vacations-overview .table-container.view td > div:not(.button-new):not(.vacations-overview-popup-edit):hover > button { background-color: #9ed18f; border: 1px solid white; }
+#Vacations-overview .table-container.view td > div.isclosing:hover button { background-color: #fdd3a7 !important;}
+#Vacations-overview .table-container.view .button-new { opacity: 0.2;}
+#Vacations-overview .vacations-overview-popup-edit .button-x { position: absolute; top: 0; right: 0; left: unset; transform: unset;  min-width: 20px; min-height: 20px; background: var(--button-normal-border); border-radius: 0 0 0 10px; }
+#Vacations-overview .vacations-overview-popup-edit .button-x:hover { opacity: 1;}
+
+#Vacations-overview .table-container .vacations-overview-popup-edit { display: grid; grid-template-areas: "con con" "rem sav";}
+#Vacations-overview .table-container .vacations-overview-popup-edit > button:not(.button-x) { margin: 0; min-width: 50%; }
+#Vacations-overview .table-container .vacations-overview-popup-edit .button-remove {background: #f58186; }
+#Vacations-overview .table-container .vacations-overview-popup-edit .button-remove:hover {background: #FF0D0D; }
+.vacations-overview-popup-edit { position: absolute; background: white; z-index: 100; border: 2px solid var(--button-normal-border); }
+#Vacations-overview .table-container .vacations-overview-popup-edit.add { grid-template-areas: "con con" "sav sav";}
+#Vacations-overview .table-container .vacations-overview-popup-edit.add .button-save {grid-area: sav;}
+.vacations-overview-popup-edit .container { padding: 8px; }
+.vacations-overview-popup-edit h4 { margin: 0 0 8px; }
+
+
+#Roster-copy-person-from { margin: 20px 0 40px; grid-area: week-copy;}
+#Roster-auto-add-shifts {grid-area: auto-add}
+
+#Popup.roster-copy-person #Popup-container { padding: 20px; }
+#Popup.roster-copy-person .box { display: flex; gap: 16px; }
+#Popup.roster-copy-person .box .item { display: flex; flex-direction: column; }
+#Popup.roster-copy-person .box .item button:not(.button-save) { border-radius: 0; }
+
+#Popup.roster-copy-person-table { padding: 0; }
+#Popup.roster-copy-person-table #Popup-container { border-radius: 0; box-sizing: border-box; padding: 20px 20px 40px; min-width: unset; max-width: 100%; height: 100%; min-height: 100%; margin: 0; max-height: 100%; width: 100% !important;}
+#Popup.roster-copy-person-table .box { display: flex; position: relative; }
+#Popup.roster-copy-person-table .box .item-table { max-width: calc(50% - 16px); }
+#Popup.roster-copy-person-table .box .item-table > .container { overflow: auto; position: relative; z-index: 2; max-height: calc(100vh - 176px); }
+#Popup.roster-copy-person-table .box .item-table-to { max-width: calc(50% + 16px); position: relative; z-index: 2;}
+#Popup.roster-copy-person-table .box .item-header { display: flex; position: sticky; left: 0; z-index: 3; margin-bottom: -1px; border-bottom: 1px solid var(--color-black);}
+#Popup.roster-copy-person-table .box .item-table-to .item-header { justify-content: flex-end; max-width: calc(100% - 101px); margin-left: auto;}
+#Popup.roster-copy-person-table .box .item-header .edit-shift { border-radius: 0; border-right: 0; border-bottom: 0;}
+#Popup.roster-copy-person-table .box .item-header .change-date {line-height: 20px;}
+#Popup.roster-copy-person-table .box .item-header .change-date button { min-width: unset; border-radius: 0; }
+#Popup.roster-copy-person-table .box .item-header .change-date button:first-child { border-right: 0; }
+#Popup.roster-copy-person-table .box .select-roster-label { background: #d3f0f9; border: 1px solid var(--color-black); border-bottom: 0; border-radius: 8px 0 0 0; display: flex; flex-direction: column; max-width: 110px; position: sticky; left: 0; }
+#Popup.roster-copy-person-table .box .select-roster-label { height: 32px; }
+#Popup.roster-copy-person-table .box .item-table-to > .container { margin-left: 32px; }
+#Popup.roster-copy-person-table .box .item-table-to .select-roster-label { background: #fff2c5; border-radius: 0 8px 0 0; max-width: 110px; position: relative; left: unset;  width: 100% !important; }
+#Popup.roster-copy-person-table .box .select-roster { border-radius: 0; background: transparent; border: 0; padding: 0 18px; line-height: 32px;}
+#Popup.roster-copy-person-table .box table { z-index: 1; position: relative; background: white; margin-bottom: 20px; }
+#Popup.roster-copy-person-table .box table * { padding: 0 !important; margin: 0px !important;}
+#Popup.roster-copy-person-table .box table thead { position: sticky; top: 0; z-index: 11;}
+#Popup.roster-copy-person-table .box table th { padding: 4px 2px !important; background: white; z-index: 1;}
+#Popup.roster-copy-person-table .box table th.inactive { background: #d5e3ca !important;}
+#Popup.roster-copy-person-table .box table td.inactive { background: #f0ffeb !important;}
+#Popup.roster-copy-person-table .box table th.hover,
+#Popup.roster-copy-person-table .box table th:hover,
+#Popup.roster-copy-person-table .box table td.hover,
+#Popup.roster-copy-person-table .box table tr:hover .td-name,
+#Popup.roster-copy-person-table .box table td:hover { outline: 1px solid lightcoral;}
+#Popup.roster-copy-person-table .box table tr:hover .Roster-week-td-name {z-index: 111;}
+#Popup.roster-copy-person-table .box table td >.container {padding: 4px !important; min-height: inherit; }
+#Popup.roster-copy-person-table .box table td.free p{ display: flex; justify-content: center; align-items: center;}
+#Popup.roster-copy-person-table .box table p { font-size: 12px; }
+#Popup.roster-copy-person-table .box table .td-name p:first-child {}
+#Popup.roster-copy-person-table .box table .td-name p.overtime {font-size: 10px; }
+#Popup.roster-copy-person-table .box table .td-name p.hours { font-size: 10px; }
+#Popup.roster-copy-person-table .box table tr .Roster-week-td-name {position: sticky; left: 0; background: white; z-index: 10; padding: 0 !important; }
+#Popup.roster-copy-person-table .box table tr .Roster-week-td-name .td-name { padding: 4px 4px !important;  box-sizing: border-box; }
+#Popup.roster-copy-person-table .box table tbody tr:last-child .Roster-week-td-name .td-name {border-bottom: 0;}
+
+
+#Popup.roster-copy-person-table .box table tr:nth-child(2n) td { background: #f1f0f0;}
+#Popup.roster-copy-person-table .box table td:not(.Roster-week-td-name){ min-width: 99px; min-height: 42px; box-sizing: border-box; }
+#Popup.roster-copy-person-table .box table .breaks,
+#Popup.roster-copy-person-table .box table .mpa >div:first-child,
+#Popup.roster-copy-person-table .box table .td-editable-cell,
+#Popup.roster-copy-person-table .box table .td-editable-row,
+#Popup.roster-copy-person-table .box table .td-editable-row,
+#Popup.roster-copy-person-table .box table .tr-editable,
+#Popup.roster-copy-person-table .box table .tr-empty:nth-last-child(2),
+#Popup.roster-copy-person-table .box table .info { display: none; }
+#Popup.roster-copy-person-table .box table .Roster-week-td { box-sizing: content-box; min-width: 80px; }
+
+#Popup.roster-copy-person-table .box .Roster-week-table-copy-person-container { position: relative; max-width: calc(50% - 16px); overflow: auto; }
+#Popup.roster-copy-person-table .box .item:last-child .Roster-week-table-copy-person-container { padding: 33px 0 0 32px;}
+#Popup.roster-copy-person-table .box table#Roster-week-table-from th:not(.inactive).hover,
+#Popup.roster-copy-person-table .box table#Roster-week-table-from th:not(.inactive):hover { background-color: #c3e1eb !important;}
+#Popup.roster-copy-person-table .box table#Roster-week-table-from td { cursor: pointer; }
+#Popup.roster-copy-person-table .box table#Roster-week-table-from td:not(.no-shift).active { background-color: #d3f0f9;}
+#Popup.roster-copy-person-table .box table#Roster-week-table-from tr:nth-child(2n) td:not(.no-shift).active { background-color: var(--button-normal-active-background);}
+#Popup.roster-copy-person-table .box table#Roster-week-table-from td:not(.no-shift):not(.inactive).hover,
+#Popup.roster-copy-person-table .box table#Roster-week-table-from td:NOT(.no-shift):not(.inactive):hover { background-color: #c3e1eb !important;}
+#Popup.roster-copy-person-table .box table#Roster-week-table-from th { cursor: pointer; padding: 4px 2px !important; }
+#Popup.roster-copy-person-table .box table#Roster-week-table-from th.active { background-color: var(--button-normal-active-background);}
+
+#Popup.roster-copy-person-table .box table#Roster-week-table-to th.active { background: #fbce50;}
+#Popup.roster-copy-person-table .box table#Roster-week-table-to th:not(.inactive).hover,
+#Popup.roster-copy-person-table .box table#Roster-week-table-to th:not(.inactive):hover { background-color: #f1de9d !important;}
+#Popup.roster-copy-person-table .box table#Roster-week-table-to td.active { background: #fff2c5;}
+#Popup.roster-copy-person-table .box table#Roster-week-table-to tr:nth-child(2n) td.active { background: #fbce50;}
+#Popup.roster-copy-person-table .box table#Roster-week-table-to th.hover,
+#Popup.roster-copy-person-table .box table#Roster-week-table-to td:not(.no-shift):not(.inactive).hover,
+#Popup.roster-copy-person-table .box table#Roster-week-table-to td:not(.no-shift):not(.inactive):hover { background-color: #f1de9d !important;}
+#Popup.roster-copy-person-table .box table#Roster-week-table-to td.Roster-week-td.no-shift:not(.inactive).hover,
+#Popup.roster-copy-person-table .box table#Roster-week-table-to td.Roster-week-td.no-shift:not(.inactive):hover { background-color: #f1de9d !important;}
+#Popup.roster-copy-person-table .box .button-save { border-radius: 0; border: 1px solid var(--color-black); line-height: 22px; display: flex; height: 100%; position:absolute; top: 0; left: 0; z-index: 1;}
+
+#Closingtimes #Popup-container.lawful {padding: 40px 20px 20px;}
+.lawful-vacations >div { display: grid; grid-template-columns: auto auto 1fr;}
+.lawful-vacations >div >* {display: flex; align-items: center;}
+
+#Add-closingtimes-closingtimes .td-person >div { display: flex; justify-content: center; padding: 4px 0; }
+#Add-closingtimes-closingtimes .td-person .all { padding-right: 8px;}
+#Add-closingtimes-closingtimes .td-person .all >button { height: 100%; }
+#Add-closingtimes-closingtimes .td-person .container { display: flex !important; flex-wrap: wrap; justify-content: center; gap: 6px; min-width: unset !important; }
+#Add-closingtimes-closingtimes .td-person button {padding: 4px 6px; min-width: unset; min-height: unset; border-radius: 6px;}
+
+.Footer {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-top: 40px;
+}
+.Footer a { color: var(--color-blue) !important; cursor: pointer; }
+
+@keyframes loadingA {
+    0%   {opacity: 1;}
+    25%  {opacity: 1;}
+    50%  {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes loadingB {
+    0%   {opacity: 0;}
+    25%  {opacity: 1;}
+    50%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes loadingC {
+    0%   {opacity: 0;}
+    25%  {opacity: 0;}
+    50%  {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+
+
+#Loading-screen.d-none { opacity: 0; display: flex !important; z-index: -1;}    
+#Loading-screen {    
+    transition: opacity 1s;
+    align-items: center;
+    background: var(--color-lightblue);
+    display: flex;
+    font-size: 45px;
+    justify-content: center;
+    height: 100%;
+    left: 0;
+    opacity: .8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000000;
+}
+#Loading-screen >div { animation-duration: 1s; animation-iteration-count: infinite;}    
+#Loading-screen >div:nth-child(1) {  animation-name: loadingA; }
+#Loading-screen >div:nth-child(2) {  animation-name: loadingB; }
+#Loading-screen >div:nth-child(3) {  animation-name: loadingC; }
+
+#Console { all: unset; position: fixed; bottom: 0; left: 0; width: 100%; background: black; z-index: 1000000; color: white; }
+#Console-input { display: flex; height: 18px; white-space: pre; }
+#Console-input div.person {color: var(--color-whitegreen);}
+#Console-input div.day {color: var(--color-whiteblue);}
+#Console-input div.time {color: var(--color-whiteblue);}
+#Console-input div.time {color: var(--color-whiteblue);}
+#Console-help  div.active{ background: white; color: black; }

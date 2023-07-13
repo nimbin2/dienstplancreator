@@ -1,2 +1,2 @@
 # dienstplancreator
-Dienstplan erstellen
+dienstplan erstellen

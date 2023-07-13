@@ -1,0 +1,20 @@
+#User-details { display: grid; grid-template-columns: repeat(4, auto); grid-template-rows: auto 1fr; align-items: flex-start; overflow: auto; background: white; border: 1px solid black; padding: 0 10px;}
+#User-details >.main-title {grid-column: 1 / -1 !important; background: var(--color-lightblue); margin: 0; padding: 10px 20px; margin-left: -10px; width: 100%;}
+#User-details >*:not(.main-title) {max-height: 300px; overflow: scroll; min-width: 260px; border-right: 1px solid black; padding: 20px 10px; min-height: 100%; box-sizing: border-box;}
+#User-details >*:last-child {border-right: 0;}
+
+.table-three {display: grid; grid-template-columns: auto auto auto; max-width: max-content; gap: 4px 8px;}
+.table-three >h2.title {grid-column: 1 / -1; }
+.table-three >div.title {font-weight: bold; }
+
+.table-two {display: grid; grid-template-columns: auto auto; max-width: max-content; gap: 4px 8px;}
+.table-two >h2.title {grid-column: 1 / -1;}
+.table-two >div.title {font-weight: bold; }
+
+.table-one {display: grid; grid-template-columns: auto; max-width: max-content; gap: 4px 8px;}
+.table-one >div.title {font-weight: bold; }
+table tr.active {background-color: var(--color-whiteblue)}
+
+#Week-select { display: flex; align-items: center;}
+#Week-select button:first-child { border-left: 1px solid black; }
+#Logout-button { border-left: 1px solid black !important;}

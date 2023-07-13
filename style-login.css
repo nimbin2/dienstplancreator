@@ -1,0 +1,9 @@
+body {display: flex; min-height: 100vh;}
+.title {text-align: center}
+.container { max-width: max-content; margin: auto;}
+form { display: grid; grid-template-columns: auto auto; align-items: center; gap: 8px; background: orange; padding: 20px;}
+input {background: white !important; }
+.button-login { border-radius: 0 !important; grid-column: 1 / -1 !important; text-align: center !important; cursor: pointer !important;}
+.button-login:hover { background: var(--color-lightblue-background) !important; }
+.errormessage { color: var(--color-red);}
+#Login-select-institution {    width: 100%; min-height: 26px; padding: 4px 8px;}

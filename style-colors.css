@@ -1,0 +1,36 @@
+:root { 
+    --color-black: #1e2122; 
+    --color-lightblack: #3a5962; 
+    --color-lightblue: lightblue; 
+    --color-whiteblue: #d4eaf1; 
+    --color-blue: #9eb9d7; 
+    --color-darkblue: #477a8b; 
+    --color-whitegreen: #c1e7b6; 
+    --color-whitegreen-hover: #8ac572; 
+    --color-gray: #838383; 
+    --color-whitegray: #efefef; 
+    --color-lightgray: lightgray; 
+    --color-yellow: #ede68d; 
+    --color-lightred: #b97e82; 
+    --color-red: #a55052; 
+    --color-orange: #ffbc00; 
+    --color-orange-hover: orange; 
+    --color-darkorange: #ebaa17; 
+    --color-darkorange-hover: #df9204; 
+    --color-transparent-white: #ecf5ffd9; 
+    --color-transparent-lightblue: #add8e66e; 
+    --color-lightblue-background: #e4f4f9; 
+    --color-normal-background: #ecf5ff; 
+    --color-outline-hover: #ffbc40; 
+    --color-text-green: green; 
+    --color-text-red: red; 
+    --color-text-orange: #e9750f; 
+    --button-normal-border: lightblue; 
+    --button-normal-hover-background: #d4eaf5; 
+    --button-normal-active-background: lightblue; 
+    --button-normal-active-hover-background: #c8e5ee; 
+    --button-remove-background: #b97e82; 
+    --button-remove-hover-background: #a55052; 
+    --button-save-background: #77b964; 
+    --button-save-hover-background: #9dd18e; 
+}
