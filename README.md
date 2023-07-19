@@ -58,7 +58,7 @@ FLUSH PRIVILEGES;
 sudo certbot --apache -d mydomain.de
 ```
 
-6. In der `index.php` den Abschnitt zum Erstellen eines Accounts uncommenten, sodass der erste Nutzer erstellt wird, ändere "admin" zu "superadmin":
+6. In der `index.php` den Abschnitt zum Erstellen eines Accounts uncommenten, sodass der erste Nutzer erstellt wird,- ändere "admin" zu "superadmin". Nach erstem Laden der Seite den Abschnitt wieder kommentieren:
 ```
 # Insert a new account (execute twice to test the "already existing" account error)
 ```
