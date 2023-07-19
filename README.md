@@ -10,7 +10,7 @@ DIese Seite ist zum Erstellen und Speichern von Dienstplänen.
 ## Anleitung
 
 1. Repository klonen:
-  `git clone git@github.com:nimbin2/dienstplancreator.git`
+  `git clone https://github.com/nimbin2/dienstplancreator.git`
 
 
 2. MySQL Benutzer und Datenbank erstellen. Derzeit sollte der Name "datadienstplandb" beibehalten werden oder er muss in allen Dateien im Ordner "api" geändert werden (z.B. mit `sed -i "s/datadienstplandb/NEUERNAME/g" api/*/*`):
