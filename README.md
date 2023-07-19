@@ -29,7 +29,8 @@ FLUSH PRIVILEGES;
 
 3. Apache starten:
 
-```<VirtualHost *:80>
+```
+<VirtualHost *:80>
     ServerAdmin mail@me.de
     DocumentRoot "PATHTODIR"
     ServerName dienstplan-creator.de
