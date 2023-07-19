@@ -15,7 +15,9 @@ DIese Seite ist zum Erstellen und Speichern von Dienstplänen.
 
 2. MySQL Benutzer und Datenbank erstellen. Derzeit sollte der Name "datadienstplandb" beibehalten werden oder er muss in allen Dateien im Ordner "api" geändert werden (z.B. mit `sed -i "s/datadienstplandb/NEUERNAME/g" api/*/*`):
 
-```mysql -u root -p
+```
+mysql -u root -p
+
 CREATE USER `USERNAME`@'localhost' IDENTIFIED BY 'PASSWORD';
 CREATE DATABASE `datadienstplandb`;
 GRANT ALL PRIVILEGES ON `datadienstplandb`.* TO 'USERNAME'@'localhost';
