@@ -24,7 +24,9 @@ GRANT ALL PRIVILEGES ON `datadienstplandb`.* TO 'USERNAME'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
-2.1 MySQL Username und Password in `api/config/db_inc.php` einfügen:
+2.1 MYSQL Tabellen erstellen. Zur hilfe gibt es das script ```createDataDienstplanDB.sh``` welches mit ```bash createDataDienstplanDB.sh``` ausgeführt werden kann. Hierfür wirst du nach dem root mysql passwort gefragt. Wenn die datenbank nicht "datadienstplandb" genannt wurde muss der name im script geändert werden.
+
+2.2 MySQL Username und Password in `api/config/db_inc.php` einfügen:
 
     $user = 'USERNAME';
     $passwd = 'PASSWORD';
