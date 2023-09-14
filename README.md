@@ -2,6 +2,10 @@
 
 DIese Seite ist zum Erstellen und Speichern von Dienstplänen.
 
+## BUGS
+- Wenn eine person gelöscht wird kann in dieser woche die Tabellenübersicht nicht genutzt werden
+- Gelöschte personen können nicht in der Personenübersicht angeeigt werden
+
 ## Voraussetzungen
 
 - PHP
